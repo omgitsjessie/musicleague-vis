@@ -27,3 +27,4 @@ Questions of interest:
 2. Is there someone in your league who is your musical polar opposite? How do downvotes look?
 3. Voting strategy: Do you spread out the love, or pour all your votes on the most deserving submission?
 4. What do the songs you have submitted / upvoted / downvoted have in common?
+5. What does the leaderboard look like over time?

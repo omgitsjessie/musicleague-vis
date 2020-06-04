@@ -39,9 +39,9 @@ edge_list_weighted <- joined_musicleague_voting_data %>% subset(select = -c(roun
 edge_list_weighted_pos <- edge_list_weighted[edge_list_weighted$points > 0, ]
 edge_list_weighted_neg <- edge_list_weighted[edge_list_weighted$points < 0, ]
 
-#Create edge lists for votes. One col per vote. [voter, submitter]
+#Create edge lists for votes. One row per vote. [voter, submitter]
 edge_list_long_pos <- uncount(edge_list_weighted_pos, points)
-#For negative votes, ake absolute value of points on this one then uncount() the same way
+#For negative votes, take absolute value of points on this one then uncount() the same way
 edge_list_weighted_neg$points <- abs(edge_list_weighted_neg$points)
 edge_list_long_neg <- uncount(edge_list_weighted_neg, points)
 
