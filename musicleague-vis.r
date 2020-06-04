@@ -21,8 +21,6 @@ voters <- unique(votes$voter) %>% as.data.frame()
 submitted_and_voted <- submitters %>% inner_join(voters)
 colnames(submitted_and_voted) <- c("submitter") #so you can join on this common colname later
 
-#TODO - Question for Nate -- can you vote if you don't submit? might need to control for that too someday
-
 #join data to get submitters in the same table as votes; include only those who submitted and voted
 joined_musicleague_voting_data_all <- votes %>% left_join(submissions)
 joined_musicleague_voting_data <- joined_musicleague_voting_data_all %>% inner_join(submitted_and_voted)
@@ -30,8 +28,7 @@ joined_musicleague_voting_data <- joined_musicleague_voting_data_all %>% inner_j
 joined_musicleague_voting_data$voter <- as.factor(joined_musicleague_voting_data$voter)
 joined_musicleague_voting_data$submitter <- as.factor(joined_musicleague_voting_data$submitter)
 
-
-#Clean data to required formats.
+#Clean data to required formats: edge lists and adjacency matrices
 #drop extra cols so we just have voters, submitters, and points
 edge_list_weighted <- joined_musicleague_voting_data %>% subset(select = -c(round, voted, song, submitted))
 
