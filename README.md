@@ -4,7 +4,7 @@ Looking at voter and submission data from Spotify Music League (check it out [he
 # Data
 Submission and voter data were exported by a musicleague dev and provided via google sheet that updated on demand.
 
-##Submissions
+## Submissions
 | Name | Description | Example |
 | - | - | - |
 | round | Name of the voting round for submission | Best angry song | 
@@ -12,7 +12,7 @@ Submission and voter data were exported by a musicleague dev and provided via go
 | submitter | Username of who submitted that song | omgitsjessie | 
 | song | Spotify song ID | spotify:track:1GCbc1vpkZA2zhjsSFhmHT | 
 
-##Votes
+## Votes
 | Name | Description | Example |
 | - | - | - |
 | round | Name of the voting round for submission | Best angry song | 
