@@ -68,3 +68,30 @@ adj_matrix_neg <- table(edge_list_long_neg$voter, edge_list_long_neg$submitter) 
 chorddiag(adj_matrix_pos)
 chorddiag(adj_matrix_neg)
 
+
+#Network plotting? w igraph. Basic graph object requires adj matrix
+network_pos <- graph_from_adjacency_matrix(adj_matrix_pos, mode="directed", weighted=TRUE)
+network_neg <- graph_from_adjacency_matrix(adj_matrix_neg, mode="directed", weighted=TRUE)
+
+#TODO vertex size based on number of votes received?
+# plot(network_pos) #yikes
+# plot(network_pos, layout=layout.sphere, main="sphere", 
+#      edge.arrow.size=0.2)
+# plot(network_pos, layout=layout.circle, main="circle", 
+#      edge.arrow.size=0.2, edge.width=0.1)
+# plot(network_pos, layout=layout.random, main="random", 
+#      edge.arrow.size=0.2)
+# plot(network_pos, layout=layout.fruchterman.reingold, main="fruchterman.reingold", 
+#      edge.arrow.size=0.2, edge.width=0.5, vertex.size=5)
+
+#downvote networks
+# plot(network_neg) #yikes
+# plot(network_neg, layout=layout.sphere, main="sphere", 
+#      edge.arrow.size=0.2, edge.width=0.5, vertex.size=5)
+# plot(network_neg, layout=layout.circle, main="circle", 
+#      edge.arrow.size=0.2, edge.width=0.5, vertex.size=5)
+# plot(network_neg, layout=layout.random, main="random", 
+#      edge.arrow.size=0.2, edge.width=0.5, vertex.size=5)
+plot(network_neg, layout=layout.fruchterman.reingold, main="fruchterman.reingold", 
+     edge.arrow.size=0.3, edge.width=0.5, vertex.size=5) #Best one -- still gross.
+
